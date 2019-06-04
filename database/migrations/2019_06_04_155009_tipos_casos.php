@@ -15,6 +15,8 @@ class TiposCasos extends Migration
     {
         Schema::create('casos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('tipo_caso');
+            $table->integer('dias');
             $table->timestamps();
         });
     }

@@ -15,9 +15,17 @@ class TicketsCasos extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->intenger('año');
+            $table->intenger('mes');
+            $table->intenger('number');
+            $table->intenger('casos_id')->unsigned();
+
+            $table->foreign('casos_id')->references('id')->on('casos');
+            
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
