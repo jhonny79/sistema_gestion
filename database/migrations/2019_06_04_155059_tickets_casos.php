@@ -18,10 +18,11 @@ class TicketsCasos extends Migration
             $table->integer('año');
             $table->integer('mes');
             $table->integer('number');
-            $table->integer('caso_id')->unsigned();
             $table->timestamps();
         });
-        Schema::table('tickets', function($table){
+        Schema::table('tickets', function (Blueprint $table) {
+            $table->unsignedBigInteger('caso_id');
+        
             $table->foreign('caso_id')->references('id')->on('casos');
         });
     }
