@@ -18,9 +18,11 @@ class TicketsCasos extends Migration
             $table->integer('año');
             $table->integer('mes');
             $table->integer('number');
-            $table->integer('casos_id')->unsigned();
-            $table->foreign('casos_id')->references('id')->on('casos');
+            $table->integer('caso_id')->unsigned();
             $table->timestamps();
+        });
+        Schema::table('tickets', function($table){
+            $table->foreign('caso_id')->references('id')->on('casos');
         });
     }
 
