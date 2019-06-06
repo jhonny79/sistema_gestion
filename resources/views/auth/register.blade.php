@@ -41,14 +41,14 @@
                             <label for="cargo" class="col-md-4 col-form-label text-md-right">Cargo</label>
 
                             <div class="col-md-6">
-                                <select name="cargo" id="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('last-name') }}">
+                                <select name="cargo" id="nombre" class="form-control @error('cargo') is-invalid @enderror">
                                     <option value="select">Selecione una Opcion</option>
-                                    <option value="{{ old('cargo') }}">Especialista</option>
-                                    <option value="{{ old('cargo') }}">Consultor</option>
-                                    <option value="{{ old('cargo') }}">Supervisor</option>
-                                    <option value="{{ old('cargo') }}">Cordinador</option>
+                                    <option value="Especialista">Especialista</option>
+                                    <option value="Consultor">Consultor</option>
+                                    <option value="Supervisor">Supervisor</option>
+                                    <option value="Cordinador">Cordinador</option>
                                 </select>
-                                @error('name')
+                                @error('cargo')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
