@@ -13,9 +13,9 @@
         </div>
       </div>
       <!-- sidebar-search  -->
-      <div class="dropdown">
-        <a href="panel_correo" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"> Correo</a>
-            <div class="dropdown-menu">
+      <div class="sidebar-dropdown">
+        <a href="{{ 'panel_correo' }}" class="sidebar-submenu" data-toggle="dropdown" data-hover="dropdown"> Correo</a>
+            <div class="sidebar-submenu">
               <ul>
                 <li>
                   <a class="dropdown-item" href="#">Recibidos</a>
@@ -48,7 +48,7 @@
               </ul>
             </div>
           </li>
-          <li class="sidebar-dropdown">
+          <!--  <li class="sidebar-dropdown">
             <a href="#">
               <i class="far fa-gem"></i>
               <span>Components</span>
@@ -134,7 +134,7 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div>-->
       <!-- sidebar-menu  -->
     </div>
   </nav>
